@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <style>
+      #birthday-display {
+        background-color: #ff9f43;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="birthday-card">
+      <button id="birthday-button">Souhaiter un joyeux anniversaire</button>
+      <div id="birthday-display">
+        <p>Joyeux anniversaire Ngoro Thaly Tigre Masteur!</p>
+      </div>
+    </div>
+    <script>
+      const BirthdayCard = React.createClass({
+        getInitialState() {
+          return { display: "" };
+        },
+        handleClick() {
+          this.setState({ display: "🎂🎉🎈" });
+          setInterval(() => {
+            this.setState(prevState => ({
+              display: prevState.display + "🎂🎉🎈"
+            }));
+          }, 500);
+        },
+        render() {
+          return (
+            <div id="birthday-card">
+              <button id="birthday-button" onClick={this.handleClick}>
+                Souhaiter un joyeux anniversaire
+              </button>
+              <div id="birthday-display">
+                <p>Joyeux anniversaire Ngoro Thaly Tigre Masteur!</p>
+                {this.state.display}
+              </div>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(<BirthdayCard />, document.body);
+    </script>
+  </body>
+</html>
