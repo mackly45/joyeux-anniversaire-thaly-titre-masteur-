@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      #birthday-card {
+        background-color: #ff9f9f;
+        padding: 20px;
+        text-align: center;
+      }
+      #birthday-button {
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      #birthday-display {
+        margin-top: 20px;
+        font-size: 36px;
+        font-weight: bold;
+        color: #ff6f6f;
+      }
+    </style>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="birthday-card">
+        <p>
+          Joyeux anniversaire Ngoro, l'ami si vrai,
+          Aujourd'hui, on célèbre toi, oh que oui !
+          Tigre maître, fort et courageux,
+          Tu es un exemple pour tous les gens autour de toi.
+        </p>
+        <p>
+          Ton sourire est comme le soleil qui brille,
+          Ta gentillesse, un joyau sans égal.
+          Ngoro, tu es une vraie perle rare,
+          Et cet anniversaire est pour te dire :
+        </p>
+        <p>
+          Combien tu es important pour nous,
+          Et combien on est heureux de te connaître.
+          Joyeux anniversaire, avec beaucoup de rimes,
+          Que cette journée soit remplie de bonnes chimes !
+        </p>
+        <button id="birthday-button">Souhaiter un joyeux anniversaire</button>
+        <div id="birthday-display"></div>
+      </div>
+    </div>
+    <script>
+      const birthdayButton = document.getElementById("birthday-button");
+      const birthdayDisplay = document.getElementById("birthday-display");
+
+      birthdayButton.addEventListener("click", function() {
+        birthdayDisplay.innerHTML = "Joyeux anniversaire Ngoro !";
+    });
+    </script>
+    
+      </body>
+    </html>
